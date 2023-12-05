@@ -8,20 +8,20 @@ const filename = 'example.png';
  * Sizes: 16, 32, 48, 128
  */
 function createIcons() {
-  for (let size of [16, 32, 48, 128]) {
-    imagemagick.resize(
-      {
-        srcPath: `${root}${filename}`,
-        dstPath: `${root}icon${size}.png`,
-        width: size,
-        height: size,
-      },
-      (err, res) => {
-        if (err) throw err;
-      }
-    );
-    console.log(`resized ${filename} to ${size}x${size}`);
-  }
+    for (let size of [16, 32, 48, 128]) {
+        imagemagick.resize(
+            {
+                srcPath: `${root}${filename}`,
+                dstPath: `${root}icon${size}.png`,
+                width: size,
+                height: size,
+            },
+            (err, res) => {
+                if (err) throw err;
+            }
+        );
+        console.log(`resized ${filename} to ${size}x${size}`);
+    }
 }
 
 createIcons();

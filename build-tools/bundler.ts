@@ -9,7 +9,7 @@ import { getFilepaths } from './get-filepaths';
 const entrypoints = await getFilepaths();
 
 await Bun.build({
-  entrypoints: entrypoints,
-  outdir: '../dist',
-  minify: true,
+    entrypoints: entrypoints,
+    outdir: '../dist',
+    minify: true,
 });

@@ -1,1 +1,3 @@
-/* This file is your content script. */
+import { MarketObserver } from './internal/market-observer';
+
+new MarketObserver().observe();
